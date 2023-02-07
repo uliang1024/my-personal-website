@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div id="home" class="carousel slide vh-100">
+    <div class="carousel-inner h-100">
+        <div class="carousel-item h-100 active" style="background-image: url(https://i.imgur.com/Q4xcX5Q.jpg);">
+            <div class="carousel-caption d-md-block scroll-animation-left">
+                <h1>您好，歡迎來到 U亮的部落格</h1>
+                <p>沒錯！背景的照片是我本人！2018年拍攝，關於我的部分點擊下方按鈕。</p>
+                <p><a href="#About" class="btn btn-primary mt-3">了解更多</a></p>
+            </div>
+        </div>
+        <div class="carousel-item h-100" style="background-image: url(https://i.imgur.com/MBQucIl.jpg);">
+            <div class="carousel-caption d-md-block scroll-animation-left">
+                <h1>生活的大小事</h1>
+                <p>放輕鬆好好享受生活，快樂才是人生的目的。</p>
+                <p><a href="#Life" class="btn btn-primary mt-3">了解更多</a></p>
+            </div>
+        </div>
+        <div class="carousel-item h-100"
+            style="background-image: url(https://cdn.pixabay.com/photo/2020/01/26/20/14/computer-4795762_960_720.jpg);">
+            <div class="carousel-caption d-md-block scroll-animation-left">
+                <h1>寫程式是我的興趣</h1>
+                <p>學習面對困難，觀察螞蟻的動作，團結是最好的方法。</p>
+                <p><a href="#Learn" class="btn btn-primary mt-3">了解更多</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-control-prev" style="width: 40px;">
+        <span class="carousel-control-prev-icon" aria-hidden="true" type="button" data-bs-target="#home"
+            data-bs-slide="prev" style="height: 100px;"></span>
+        <span class="visually-hidden">Previous</span>
+    </div>
+    <div class="carousel-control-next" style="width: 40px;">
+        <span class="carousel-control-next-icon" aria-hidden="true" type="button" data-bs-target="#home"
+            data-bs-slide="next" style="height: 100px;"></span>
+        <span class="visually-hidden">Next</span>
+    </div>
+</div>
+
+<!-- <div id="About">
+    <div class="container overflow-hidden">
+        <div class="mb-3">
+            <div class="row g-0 p-5">
+                <div class="col-lg-8 order-lg-2">
+                    <h1 class="text-uppercase">about <span>me</span></h1>
+                    <p class="fs-3"><strong>你好!我是友亮</strong></p>
+                    <p class="fs-5"><strong>目前為臺北商業大學資訊管理系大四的在學生</strong></p>
+                    <p>
+                        個性活潑開朗，喜歡與人聊天，在社交媒體上時常分享生活大小事，
+                        在學期間對網頁前端HTML、CSS、JavaScript有相關經驗，
+                        因本身對於影音製作以及視覺藝術有極大的熱忱，所以在UI/UX設計上非常有興趣。</p>
+                </div>
+                <div class="col-lg-4 p-5 order-lg-1">
+                    <div class="about-img">
+                        <img src="{{ url_for('static', filename='images/handsomeBoy.JPG') }}"
+                            class="img-fluid rounded-start" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<section id="About" class="py-5 overflow-auto">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-7 order-lg-2">
+                <h1 class="scroll-animation-right">About Me.</h1>
+                <p>你好!我是<span class="font-weight-bold">陳友亮</span></p>
+                <p class="py-3 scroll-animation-bottom"> 目前為臺北商業大學資訊管理系大四的在學生
+                    個性活潑開朗，喜歡與人聊天，在社交媒體上時常分享生活大小事，
+                    在學期間對網頁前端HTML、CSS、JavaScript有相關經驗，
+                    因本身對於影音製作以及視覺藝術有極大的熱忱，所以在UI/UX設計上非常有興趣。</p>
+                <div class="progress">
+                    <div class="pro-value1 px-2">
+                        <p>HTML / CSS <span class="text-white float-end">95%</span></p>
+                    </div>
+                </div>
+                <div class="progress my-3">
+                    <div class="pro-value2 px-2">
+                        <p>PHP / MYSQL <span class="text-white float-end">80%</span></p>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="pro-value3 px-2">
+                        <p>BOOTSTRAP <span class="text-white float-end">98%</span></p>
+                    </div>
+                </div>
+                <div class="progress my-3">
+                    <div class="pro-value4 px-2">
+                        <p>JAVASCRIPT / JQUERY <span class="text-white float-end">92%</span></p>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="rounded-pill px-2" style="background-color: #f3f3f3; color: #7e7e7e;">反思自省</span>
+                    <span class="rounded-pill px-2" style="background-color: #f3f3f3; color: #7e7e7e;">樂於學習</span>
+                    <span class="rounded-pill px-2" style="background-color: #f3f3f3; color: #7e7e7e;">享受生活</span>
+                    <span class="rounded-pill px-2" style="background-color: #f3f3f3; color: #7e7e7e;">自主思考</span>
+                    <span class="rounded-pill px-2" style="background-color: #f3f3f3; color: #7e7e7e;">熱忱與活力</span>
+                </div>
+                
+                <input type="button" class="btn1 mt-5" value="Download C.V">
+                <input type="button" class="btn2 mt-5" value="Contact Us">
+            </div>
+
+            <div class="col-lg-5 p-5 scroll-animation-left order-lg-1">
+                <img src="{{ url_for('static', filename='images/handsomeBoy.JPG') }}" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Learn" class="service py-5 bg-light">
+    <div class="container py-5">
+        <h1 class="text-center pb-5">Learn.</h1>
+        <div class="row pb-3">
+            <div class="col-lg-4 mb-3">
+                <div class="card text-center py-3">
+                    <div class="card-body">
+                        <div class="circle">
+                            <span><i class="fa-solid fa-desktop"></i></span>
+                        </div>
+                        <h4 class="font-weight-bold pb-2">Web Design</h4>
+                        <p>Web DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <div class="card text-center py-3">
+                    <div class="card-body">
+                        <div class="circle">
+                            <span><i class="fa-solid fa-desktop"></i></span>
+                        </div>
+                        <h4 class="font-weight-bold pb-2">Android 開發</h4>
+                        <p>Web DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <div class="card text-center py-3">
+                    <div class="card-body">
+                        <div class="circle">
+                            <span><i class="fa-solid fa-desktop"></i></span>
+                        </div>
+                        <h4 class="font-weight-bold pb-2">Web Design</h4>
+                        <p>Web DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 mb-3">
+                <div class="card text-center py-3">
+                    <div class="card-body">
+                        <div class="circle">
+                            <span><i class="fa-solid fa-desktop"></i></span>
+                        </div>
+                        <h4 class="font-weight-bold pb-2">Web Design</h4>
+                        <p>Web DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <div class="card text-center py-3">
+                    <div class="card-body">
+                        <div class="circle">
+                            <span><i class="fa-solid fa-desktop"></i></span>
+                        </div>
+                        <h4 class="font-weight-bold pb-2">Web Design</h4>
+                        <p>Web DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <div class="card text-center py-3">
+                    <div class="card-body">
+                        <div class="circle">
+                            <span><i class="fa-solid fa-desktop"></i></span>
+                        </div>
+                        <h4 class="font-weight-bold pb-2">Web Design</h4>
+                        <p>Web DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="Portfolio">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pray">
+                    <img src="{{ url_for('static', filename='images/iphone14pro.png') }}" alt="Pray">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel text-left">
+                    <h1>拒食強身</h1>
+                    <p class="pt-4"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<h4 id="Life" class="vh-100" style="height: 900px;">Third heading</h4>
+<p>...</p>
+<h1 align="center">Notes</h1>
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item">
+        {{ note.data }}
+        <button type="button" class="close" onClick="deleteNote('{{ note.id }}')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </li>
+    {% endfor %}
+</ul>
+<form method="POST">
+    <textarea name="note" id="note" class="form-control"></textarea>
+    <br />
+    <div align="center">
+        <button type="submit" class="btn btn-primary">Add Note</button>
+    </div>
+</form>
+{% endblock %}
