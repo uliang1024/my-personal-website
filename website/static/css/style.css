@@ -72,7 +72,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        right: 0;
+        right: 0;   
         height: calc(50% + 20px);
         background-color: #fff;
     }
@@ -87,6 +87,13 @@
     font-weight: 300;
     color: var(--bs-gray-400);
     margin-left: 4px;
+}
+
+@media (max-width: 991px)
+{
+    .btns {
+        text-align: center;
+    }
 }
 
 #About img {
@@ -223,21 +230,6 @@ h1 {
     transition: .5s;
 }
 
-
-#Learn .card::after {
-    display: block;
-    position: absolute;
-    bottom: -10px;
-    left: 20px;
-    width: calc(100% - 40px);
-    height: 35px;
-    background-color: #fff;
-    -webkit-box-shadow: 0 19px 28px 5px rgba(64, 64, 64, 0.09);
-    box-shadow: 0 19px 28px 5px rgba(64, 64, 64, 0.09);
-    content: '';
-    z-index: -1;
-}
-
 #Learn a.card {
     text-decoration: none;
 }
@@ -258,7 +250,7 @@ h1 {
 
 .head-icon {
     margin-top: 18px;
-    color: #FF4500
+    color: var(--bs-dark);
 }
 
 

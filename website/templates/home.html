@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<section id="Home">
+<section id="Home" class="overflow-hidden">
     <div class="container py-5">
         <div class="row mt-5 text-light">
             <div class="col-xl-9 col-lg-8 order-lg-2 py-3">
@@ -20,9 +20,10 @@
                         <p>居住地 : <span>桃園市</span></p>
                     </div>
                 </div>
-
-                <input type="button" class="btn1 mt-5" value="Download C.V">
-                <input type="button" class="btn2 mt-5" value="Contact Us">
+                <div class="btns">
+                    <input type="button" class="btn1" value="Download C.V">
+                    <input type="button" class="btn2" value="Contact Us">
+                </div>
             </div>
 
             <div class="col-xl-3 col-lg-4 scroll-animation-left order-lg-1 ">
@@ -40,8 +41,12 @@
                 <p>你好!我是<span class="font-weight-bold">陳友亮</span></p>
                 <p class="py-3 scroll-animation-bottom"> 目前為臺北商業大學資訊管理系大四的在學生
                     個性活潑開朗，喜歡與人聊天，在社交媒體上時常分享生活大小事，
-                    在學期間對網頁前端HTML、CSS、JavaScript有相關經驗，
-                    因本身對於影音製作以及視覺藝術有極大的熱忱，所以在UI/UX設計上非常有興趣。</p>
+                    在學期間對網頁前端 HTML、CSS、JavaScript 有相關經驗，
+                    因本身對於影音製作以及視覺藝術有極大的熱忱，所以在前端網頁開發上非常有興趣。
+                    這是二技校內專題所製作的網站，「警醒式遠距教學系統」。
+                    經過這次經驗，發現設計網頁到開發的過程，時間成本非常高，
+                    所以現在主要都在使用 Bootstrap 來開發網頁。
+                </p>
                 <div class="progress">
                     <div class="pro-value1 px-2">
                         <p>HTML / CSS <span class="text-white float-end">95%</span></p>
@@ -82,10 +87,45 @@
             <div class="col-lg-4 col-sm-6 mb-30 pb-5">
                 <a class="card" href="#">
                     <div class="box-shadow bg-white rounded-circle mx-auto text-center"
-                        style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-user fa-3x head-icon"></i>
+                        style="width: 90px; height: 90px; margin-top: -45px;">
+                        <i class="fa fa-desktop fa-3x head-icon"></i>
                     </div>
                     <div class="card-body text-center">
-                        <h3 class="card-title pt-1">UX Prototyping</h3>
+                        <h3 class="card-title pt-1">前端程式語言</h3>
+                        <p class="card-text text-sm">HTML、CSS 是最常接觸的前端二大語言，
+                                                    而開始認識JavaScript之後，慢慢愛上了它，
+                                                喜歡視覺藝術的我，對動態效果、動畫的呈現深深吸引住了，
+                                            雖然是喜歡，但主要是與使用者互動，讓每一位使用者得到最好的閱覽體驗。</p><span
+                            class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i
+                                class="fe-icon-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+                <a class="card" href="#">
+                    <div class="box-shadow bg-white rounded-circle mx-auto text-center"
+                        style="width: 90px; height: 90px; margin-top: -45px;">
+                        <i class="fa-brands fa-bootstrap fa-3x head-icon"></i>
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-1">Bootstrap</h3>
+                        <p class="card-text text-sm">要做 RWD 響應式設計，我推薦 Bootstrap ，這是我目前開發網頁最喜愛的前端框架之一，
+                                                    可以同時套用在不同平台上，提升了開發的效率，降低時間成本。 Bootstrap 
+                                                    + 自己寫的CSS，完美打造出客製化的網站。
+                        </p><span
+                            class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i
+                                class="fe-icon-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+                <a class="card" href="#">
+                    <div class="box-shadow bg-white rounded-circle mx-auto text-center"
+                        style="width: 90px; height: 90px; margin-top: -45px;">
+                        <i class="fa-solid fa-database fa-3x head-icon"></i>
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-1">MYSQL</h3>
                         <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                             nostrud exercitation ullamco laboris nisi ut aliquip.</p><span
@@ -97,10 +137,10 @@
             <div class="col-lg-4 col-sm-6 mb-30 pb-5">
                 <a class="card" href="#">
                     <div class="box-shadow bg-white rounded-circle mx-auto text-center"
-                        style="width: 90px; height: 90px; margin-top: -45px;"><i
-                            class="fa fa-user-circle-o fa-3x head-icon"></i></div>
+                        style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa-solid fa-code fa-3x head-icon"></i>
+                    </div>
                     <div class="card-body text-center">
-                        <h3 class="card-title pt-1">Web &amp; UI Design</h3>
+                        <h3 class="card-title pt-1">後端程式語言</h3>
                         <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                             nostrud exercitation ullamco laboris nisi ut aliquip.</p><span
@@ -112,10 +152,9 @@
             <div class="col-lg-4 col-sm-6 mb-30 pb-5">
                 <a class="card" href="#">
                     <div class="box-shadow bg-white rounded-circle mx-auto text-center"
-                        style="width: 90px; height: 90px; margin-top: -45px;"><i
-                            class="fa fa-address-book fa-3x head-icon"></i></div>
+                        style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa-solid fa-mobile fa-3x head-icon"></i></div>
                     <div class="card-body text-center">
-                        <h3 class="card-title pt-1">Front-End Development</h3>
+                        <h3 class="card-title pt-1">Android 開發</h3>
                         <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                             nostrud exercitation ullamco laboris nisi ut aliquip.</p><span
@@ -127,40 +166,11 @@
             <div class="col-lg-4 col-sm-6 mb-30 pb-5">
                 <a class="card" href="#">
                     <div class="box-shadow bg-white rounded-circle mx-auto text-center"
-                        style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-car fa-3x head-icon"></i>
+                        style="width: 90px; height: 90px; margin-top: -45px;">
+                        <i class="fa fa-video-camera fa-3x head-icon" aria-hidden="true"></i>
                     </div>
                     <div class="card-body text-center">
-                        <h3 class="card-title pt-1">Back-End Development</h3>
-                        <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip.</p><span
-                            class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i
-                                class="fe-icon-arrow-right"></i></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-30 pb-5">
-                <a class="card" href="#">
-                    <div class="box-shadow bg-white rounded-circle mx-auto text-center"
-                        style="width: 90px; height: 90px; margin-top: -45px;"><i
-                            class="fa fa-camera fa-3x head-icon"></i></div>
-                    <div class="card-body text-center">
-                        <h3 class="card-title pt-1">Usability Testing</h3>
-                        <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip.</p><span
-                            class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i
-                                class="fe-icon-arrow-right"></i></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-30 pb-5">
-                <a class="card" href="#">
-                    <div class="box-shadow bg-white rounded-circle mx-auto text-center"
-                        style="width: 90px; height: 90px; margin-top: -45px;"><i
-                            class="fa fa-image fa-3x head-icon"></i></div>
-                    <div class="card-body text-center">
-                        <h3 class="card-title pt-1">SEO Optimization</h3>
+                        <h3 class="card-title pt-1">影音製作</h3>
                         <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                             nostrud exercitation ullamco laboris nisi ut aliquip.</p><span
@@ -177,7 +187,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 p-4">
-                <div class="card card-profile text-center">
+                <div class="card card-profile text-center mt-5">
                     <div class="card-image">
                         <a href="#"> <img class="img" src="{{ url_for('static', filename='images/1.jpg') }}">
                             <div class="card-caption"> John Smith </div>
@@ -185,7 +195,8 @@
                     </div>
                     <div class="table p-3">
                         <h6 class="category text-danger">CEO / Co-Founder</h6>
-                        <p class="card-description text-secondary"> Don't be scared of the truth because we need to restart the human
+                        <p class="card-description text-secondary"> Don't be scared of the truth because we need to
+                            restart the human
                             foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but
                             the back is... </p>
                         <a href="#" class="btn btn-just-icon btn-simple btn-twitter"><i class="fa fa-twitter"></i></a>
@@ -201,7 +212,8 @@
                     </div>
                     <div class="table p-3">
                         <h6 class="category text-success">Graphic Designer</h6>
-                        <p class="card-description text-secondary"> Don't be scared of the truth because we need to restart the human
+                        <p class="card-description text-secondary"> Don't be scared of the truth because we need to
+                            restart the human
                             foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but
                             the back is... </p>
                         <a href="#" class="btn btn-just-icon btn-simple btn-twitter"><i class="fa fa-twitter"></i></a>
