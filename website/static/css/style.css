@@ -52,76 +52,54 @@
     padding: 5px;
 }
 
-.carousel-item {
+#Home {
+    background-image: url(../images/boyBg.JPG);
     background-size: cover;
-    background-attachment: scroll;
     background-repeat: repeat-y;
     background-position: center center;
     background-attachment: fixed;
 }
 
-.carousel-caption {
-    top: 50%;
-    text-transform: uppercase;
+#Home img {
+    -webkit-box-shadow: 6px 4px 41px -24px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 4px 41px -24px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 4px 41px -24px rgba(0, 0, 0, 0.75);
 }
 
-.carousel-control-prev-icon::after,
-.carousel-control-next-icon::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: var(--bs-dark);
-    opacity: 0.5;
+@media (min-width: 1200px) {
+    #Home .container:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: calc(50% + 20px);
+        background-color: #fff;
+    }
 }
 
-.carousel-item::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: var(--bs-dark);
-    opacity: 0.5;
+#Home .pim p {
+    font-weight: 600;
+    border-bottom: 1px solid var(--bs-secondary);
 }
 
-/* #About h1 {
-    letter-spacing: 0.1rem;
+#Home .pim p span {
+    font-weight: 300;
+    color: var(--bs-gray-400);
+    margin-left: 4px;
 }
-
-#About h1 span {
-    color: brown;
-}
-
-#About .about-img {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    border: 10px solid var(--bs-white);
-}
-
-#About .about-img::after {
-    content: '';
-    position: absolute;
-    left: -30px;
-    top: 30px;
-    height: 98%;
-    width: 98%;
-    border: 7px solid var(--bs-dark);
-    z-index: -1;
-} */
 
 #About img {
-    -webkit-box-shadow: 6px 4px 41px -24px rgba(0,0,0,0.75);
-    -moz-box-shadow: 6px 4px 41px -24px rgba(0,0,0,0.75);
-    box-shadow: 6px 4px 41px -24px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 4px 41px -24px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 4px 41px -24px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 4px 41px -24px rgba(0, 0, 0, 0.75);
 }
+
 h1 {
     font-size: 3rem;
     font-weight: 900;
 }
+
 .progress {
     background-color: rgb(223, 219, 219);
     justify-content: flex-start;
@@ -141,6 +119,7 @@ h1 {
     height: 25px;
     width: 0;
 }
+
 .pro-value2 {
     animation: load2 3s normal forwards;
     border-radius: 50px;
@@ -148,6 +127,7 @@ h1 {
     height: 25px;
     width: 0;
 }
+
 .pro-value3 {
     animation: load3 3s normal forwards;
     border-radius: 50px;
@@ -155,6 +135,7 @@ h1 {
     height: 25px;
     width: 0;
 }
+
 .pro-value4 {
     animation: load4 3s normal forwards;
     border-radius: 50px;
@@ -167,34 +148,42 @@ h1 {
     color: white;
     padding: 5px;
 }
+
 @keyframes load1 {
     0% {
         width: 0;
     }
+
     100% {
         width: 95%;
     }
 }
+
 @keyframes load2 {
     0% {
         width: 0;
     }
+
     100% {
         width: 80%;
     }
 }
+
 @keyframes load3 {
     0% {
         width: 0;
     }
+
     100% {
         width: 98%;
     }
 }
+
 @keyframes load4 {
     0% {
         width: 0;
     }
+
     100% {
         width: 92%;
     }
@@ -205,15 +194,15 @@ h1 {
     width: 145px;
     outline: none;
     border: none;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     border-radius: 4px;
 }
 
 .btn1:hover {
     background-color: transparent;
-    color: black;
-    border: 1px solid black;
+    color: white;
+    border: 1px solid white;
     transition: .5s;
 }
 
@@ -221,44 +210,85 @@ h1 {
     height: 40px;
     width: 145px;
     outline: none;
-    border: 1px solid black;
+    border: 1px solid white;
     background-color: transparent;
-    color: black;
+    color: white;
     border-radius: 4px;
 }
 
 .btn2:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     border: none;
     transition: .5s;
 }
 
-.card {
-    border: none;
-    outline: none;
-    -webkit-box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
-    -moz-box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
-    box-shadow:  -8px 6px 89px -65px rgba(0,0,0,0.75);
+
+#Learn .card::after {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 35px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 19px 28px 5px rgba(64, 64, 64, 0.09);
+    box-shadow: 0 19px 28px 5px rgba(64, 64, 64, 0.09);
+    content: '';
+    z-index: -1;
 }
-.card p {
-    color: gray;
+
+#Learn a.card {
+    text-decoration: none;
 }
-.circle {
-    height: 70px;
-    width: 70px;
-    background-color: lightgray;
-    color: black;
-    padding: 12px;
-    font-size: 30px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-bottom: 20px;
+
+#Learn .card {
+    box-shadow: 0 12px 20px 1px rgba(64, 64, 64, 0.09);
 }
-.card:hover .circle{
-    background-color: black;
-    color: white;
-    transition: .5s;
+
+#Learn .box-shadow {
+    -webkit-box-shadow: 0 12px 20px 1px rgba(64, 64, 64, 0.09) !important;
+    box-shadow: 0 12px 20px 1px rgba(64, 64, 64, 0.09) !important;
+}
+
+#Learn .card-text {
+    padding-top: 12px;
+    color: #8c8c8c;
+}
+
+.head-icon {
+    margin-top: 18px;
+    color: #FF4500
+}
+
+
+#Portfolio .card {
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+#Portfolio .card .card-image {
+    position: relative;
+    overflow: hidden;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -30px;
+    border-radius: 6px;
+    box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%), 0 4px 25px 0px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+}
+
+#Portfolio .card img {
+    width: 100%;
+    height: auto;
+}
+
+#Portfolio .card .card-image .card-caption {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: #fff;
+    font-size: 1.3em;
+    text-shadow: 0 2px 5px rgb(33 33 33 / 50%);
+    font-weight: 700;
 }
 
 .to-top {
@@ -293,6 +323,7 @@ h1 {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+
     .scroll-animation-top,
     .scroll-animation-bottom,
     .scroll-animation-left,

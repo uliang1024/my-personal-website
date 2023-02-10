@@ -1,72 +1,41 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<div id="home" class="carousel slide vh-100">
-    <div class="carousel-inner h-100">
-        <div class="carousel-item h-100 active" style="background-image: url(https://i.imgur.com/Q4xcX5Q.jpg);">
-            <div class="carousel-caption d-md-block scroll-animation-left">
-                <h1>您好，歡迎來到 U亮的部落格</h1>
-                <p>沒錯！背景的照片是我本人！2018年拍攝，關於我的部分點擊下方按鈕。</p>
-                <p><a href="#About" class="btn btn-primary mt-3">了解更多</a></p>
-            </div>
-        </div>
-        <div class="carousel-item h-100" style="background-image: url(https://i.imgur.com/MBQucIl.jpg);">
-            <div class="carousel-caption d-md-block scroll-animation-left">
-                <h1>生活的大小事</h1>
-                <p>放輕鬆好好享受生活，快樂才是人生的目的。</p>
-                <p><a href="#Life" class="btn btn-primary mt-3">了解更多</a></p>
-            </div>
-        </div>
-        <div class="carousel-item h-100"
-            style="background-image: url(https://cdn.pixabay.com/photo/2020/01/26/20/14/computer-4795762_960_720.jpg);">
-            <div class="carousel-caption d-md-block scroll-animation-left">
-                <h1>寫程式是我的興趣</h1>
-                <p>學習面對困難，觀察螞蟻的動作，團結是最好的方法。</p>
-                <p><a href="#Learn" class="btn btn-primary mt-3">了解更多</a></p>
-            </div>
-        </div>
-    </div>
+<section id="Home">
+    <div class="container py-5">
+        <div class="row mt-5 text-light">
+            <div class="col-xl-9 col-lg-8 order-lg-2 py-3">
+                <h1 class="scroll-animation-right">陳友亮 </h1>
+                <p>國立台北商業大學 二技資訊管理系</p>
 
-    <div class="carousel-control-prev" style="width: 40px;">
-        <span class="carousel-control-prev-icon" aria-hidden="true" type="button" data-bs-target="#home"
-            data-bs-slide="prev" style="height: 100px;"></span>
-        <span class="visually-hidden">Previous</span>
-    </div>
-    <div class="carousel-control-next" style="width: 40px;">
-        <span class="carousel-control-next-icon" aria-hidden="true" type="button" data-bs-target="#home"
-            data-bs-slide="next" style="height: 100px;"></span>
-        <span class="visually-hidden">Next</span>
-    </div>
-</div>
-
-<!-- <div id="About">
-    <div class="container overflow-hidden">
-        <div class="mb-3">
-            <div class="row g-0 p-5">
-                <div class="col-lg-8 order-lg-2">
-                    <h1 class="text-uppercase">about <span>me</span></h1>
-                    <p class="fs-3"><strong>你好!我是友亮</strong></p>
-                    <p class="fs-5"><strong>目前為臺北商業大學資訊管理系大四的在學生</strong></p>
-                    <p>
-                        個性活潑開朗，喜歡與人聊天，在社交媒體上時常分享生活大小事，
-                        在學期間對網頁前端HTML、CSS、JavaScript有相關經驗，
-                        因本身對於影音製作以及視覺藝術有極大的熱忱，所以在UI/UX設計上非常有興趣。</p>
-                </div>
-                <div class="col-lg-4 p-5 order-lg-1">
-                    <div class="about-img">
-                        <img src="{{ url_for('static', filename='images/handsomeBoy.JPG') }}"
-                            class="img-fluid rounded-start" alt="...">
+                <div class="row pim">
+                    <div class="col-md-6">
+                        <p>生日 : <span>2000年10月24日</span></p>
+                        <p>性別 : <span>男</span></p>
+                        <p>連絡電話 : <span>0974141514</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Email : <span>amisleo000@gmail.com</span></p>
+                        <p>學歷 : <span>學士學位</span></p>
+                        <p>居住地 : <span>桃園市</span></p>
                     </div>
                 </div>
+
+                <input type="button" class="btn1 mt-5" value="Download C.V">
+                <input type="button" class="btn2 mt-5" value="Contact Us">
+            </div>
+
+            <div class="col-xl-3 col-lg-4 scroll-animation-left order-lg-1 ">
+                <img src="{{ url_for('static', filename='images/handsomeBoy.JPG') }}" class="img-fluid" alt="">
             </div>
         </div>
     </div>
-</div> -->
+</section>
 
-<section id="About" class="py-5 overflow-auto">
+<section id="About" class="py-5 overflow-hidden">
     <div class="container py-5">
         <div class="row">
-            <div class="col-lg-7 order-lg-2">
+            <div class="col-lg-12 order-lg-2">
                 <h1 class="scroll-animation-right">About Me.</h1>
                 <p>你好!我是<span class="font-weight-bold">陳友亮</span></p>
                 <p class="py-3 scroll-animation-bottom"> 目前為臺北商業大學資訊管理系大四的在學生
@@ -101,111 +70,148 @@
                     <span class="rounded-pill px-2" style="background-color: #f3f3f3; color: #7e7e7e;">自主思考</span>
                     <span class="rounded-pill px-2" style="background-color: #f3f3f3; color: #7e7e7e;">熱忱與活力</span>
                 </div>
-                
-                <input type="button" class="btn1 mt-5" value="Download C.V">
-                <input type="button" class="btn2 mt-5" value="Contact Us">
-            </div>
-
-            <div class="col-lg-5 p-5 scroll-animation-left order-lg-1">
-                <img src="{{ url_for('static', filename='images/handsomeBoy.JPG') }}" class="img-fluid" alt="">
             </div>
         </div>
     </div>
 </section>
 
-<section id="Learn" class="service py-5 bg-light">
+<section id="Learn" class="py-5 bg-light sevices">
     <div class="container py-5">
         <h1 class="text-center pb-5">Learn.</h1>
-        <div class="row pb-3">
-            <div class="col-lg-4 mb-3">
-                <div class="card text-center py-3">
-                    <div class="card-body">
-                        <div class="circle">
-                            <span><i class="fa-solid fa-desktop"></i></span>
-                        </div>
-                        <h4 class="font-weight-bold pb-2">Web Design</h4>
-                        <p>Web DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb Design</p>
+        <div class="row pt-5 mt-30">
+            <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+                <a class="card" href="#">
+                    <div class="box-shadow bg-white rounded-circle mx-auto text-center"
+                        style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-user fa-3x head-icon"></i>
                     </div>
-                </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-1">UX Prototyping</h3>
+                        <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip.</p><span
+                            class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i
+                                class="fe-icon-arrow-right"></i></span>
+                    </div>
+                </a>
             </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card text-center py-3">
-                    <div class="card-body">
-                        <div class="circle">
-                            <span><i class="fa-solid fa-desktop"></i></span>
-                        </div>
-                        <h4 class="font-weight-bold pb-2">Android 開發</h4>
-                        <p>Web DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb Design</p>
+            <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+                <a class="card" href="#">
+                    <div class="box-shadow bg-white rounded-circle mx-auto text-center"
+                        style="width: 90px; height: 90px; margin-top: -45px;"><i
+                            class="fa fa-user-circle-o fa-3x head-icon"></i></div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-1">Web &amp; UI Design</h3>
+                        <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip.</p><span
+                            class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i
+                                class="fe-icon-arrow-right"></i></span>
                     </div>
-                </div>
+                </a>
             </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card text-center py-3">
-                    <div class="card-body">
-                        <div class="circle">
-                            <span><i class="fa-solid fa-desktop"></i></span>
-                        </div>
-                        <h4 class="font-weight-bold pb-2">Web Design</h4>
-                        <p>Web DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb Design</p>
+            <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+                <a class="card" href="#">
+                    <div class="box-shadow bg-white rounded-circle mx-auto text-center"
+                        style="width: 90px; height: 90px; margin-top: -45px;"><i
+                            class="fa fa-address-book fa-3x head-icon"></i></div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-1">Front-End Development</h3>
+                        <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip.</p><span
+                            class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i
+                                class="fe-icon-arrow-right"></i></span>
                     </div>
-                </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+                <a class="card" href="#">
+                    <div class="box-shadow bg-white rounded-circle mx-auto text-center"
+                        style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-car fa-3x head-icon"></i>
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-1">Back-End Development</h3>
+                        <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip.</p><span
+                            class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i
+                                class="fe-icon-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+                <a class="card" href="#">
+                    <div class="box-shadow bg-white rounded-circle mx-auto text-center"
+                        style="width: 90px; height: 90px; margin-top: -45px;"><i
+                            class="fa fa-camera fa-3x head-icon"></i></div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-1">Usability Testing</h3>
+                        <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip.</p><span
+                            class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i
+                                class="fe-icon-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+                <a class="card" href="#">
+                    <div class="box-shadow bg-white rounded-circle mx-auto text-center"
+                        style="width: 90px; height: 90px; margin-top: -45px;"><i
+                            class="fa fa-image fa-3x head-icon"></i></div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-1">SEO Optimization</h3>
+                        <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip.</p><span
+                            class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i
+                                class="fe-icon-arrow-right"></i></span>
+                    </div>
+                </a>
             </div>
         </div>
+    </div>
+</section>
+
+<section id="Portfolio" class="py-5">
+    <div class="container">
         <div class="row">
-            <div class="col-lg-4 mb-3">
-                <div class="card text-center py-3">
-                    <div class="card-body">
-                        <div class="circle">
-                            <span><i class="fa-solid fa-desktop"></i></span>
-                        </div>
-                        <h4 class="font-weight-bold pb-2">Web Design</h4>
-                        <p>Web DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb Design</p>
+            <div class="col-md-6 p-4">
+                <div class="card card-profile text-center">
+                    <div class="card-image">
+                        <a href="#"> <img class="img" src="{{ url_for('static', filename='images/1.jpg') }}">
+                            <div class="card-caption"> John Smith </div>
+                        </a>
+                    </div>
+                    <div class="table p-3">
+                        <h6 class="category text-danger">CEO / Co-Founder</h6>
+                        <p class="card-description text-secondary"> Don't be scared of the truth because we need to restart the human
+                            foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but
+                            the back is... </p>
+                        <a href="#" class="btn btn-just-icon btn-simple btn-twitter"><i class="fa fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card text-center py-3">
-                    <div class="card-body">
-                        <div class="circle">
-                            <span><i class="fa-solid fa-desktop"></i></span>
-                        </div>
-                        <h4 class="font-weight-bold pb-2">Web Design</h4>
-                        <p>Web DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb Design</p>
+            <div class="col-md-6 p-4">
+                <div class="card card-profile text-center mt-5">
+                    <div class="card-image">
+                        <a href="#"> <img class="img" src="{{ url_for('static', filename='images/11.jpg') }}">
+                            <div class="card-caption"> Clementine Thson </div>
+                        </a>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card text-center py-3">
-                    <div class="card-body">
-                        <div class="circle">
-                            <span><i class="fa-solid fa-desktop"></i></span>
-                        </div>
-                        <h4 class="font-weight-bold pb-2">Web Design</h4>
-                        <p>Web DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb DesignWeb Design</p>
+                    <div class="table p-3">
+                        <h6 class="category text-success">Graphic Designer</h6>
+                        <p class="card-description text-secondary"> Don't be scared of the truth because we need to restart the human
+                            foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but
+                            the back is... </p>
+                        <a href="#" class="btn btn-just-icon btn-simple btn-twitter"><i class="fa fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section id="Portfolio">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="pray">
-                    <img src="{{ url_for('static', filename='images/iphone14pro.png') }}" alt="Pray">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="panel text-left">
-                    <h1>拒食強身</h1>
-                    <p class="pt-4"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<h4 id="Life" class="vh-100" style="height: 900px;">Third heading</h4>
+<h4 id="Life" class="py-5 bg-light" style="height: 900px;">Third heading</h4>
 <p>...</p>
 <h1 align="center">Notes</h1>
 <ul class="list-group list-group-flush" id="notes">
