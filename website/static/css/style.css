@@ -32,6 +32,11 @@
     transition: all 1s;
 }
 
+.box-shadow {
+    -webkit-box-shadow: 0 12px 20px 1px rgba(64, 64, 64, 0.09) !important;
+    box-shadow: 0 12px 20px 1px rgba(64, 64, 64, 0.09) !important;
+}
+
 #header {
     --bs-bg-opacity: 0;
     transition: all .6s;
@@ -72,7 +77,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        right: 0;   
+        right: 0;
         height: calc(50% + 20px);
         background-color: #fff;
     }
@@ -89,8 +94,7 @@
     margin-left: 4px;
 }
 
-@media (max-width: 991px)
-{
+@media (max-width: 991px) {
     .btns {
         text-align: center;
     }
@@ -232,15 +236,17 @@ h1 {
 
 #Learn a.card {
     text-decoration: none;
+    height: 100%;
 }
 
 #Learn .card {
     box-shadow: 0 12px 20px 1px rgba(64, 64, 64, 0.09);
 }
 
-#Learn .box-shadow {
-    -webkit-box-shadow: 0 12px 20px 1px rgba(64, 64, 64, 0.09) !important;
-    box-shadow: 0 12px 20px 1px rgba(64, 64, 64, 0.09) !important;
+#Learn .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #Learn .card-text {
@@ -253,35 +259,19 @@ h1 {
     color: var(--bs-dark);
 }
 
-
-#Portfolio .card {
-    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
-}
-
-#Portfolio .card .card-image {
-    position: relative;
+#Portfolio .portfolio-item-inner {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 10px;
     overflow: hidden;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: -30px;
-    border-radius: 6px;
-    box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%), 0 4px 25px 0px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+    cursor: pointer;
 }
 
-#Portfolio .card img {
+#Portfolio .portfolio-item-inner .portfolio-img img{
     width: 100%;
-    height: auto;
+    display: block;
 }
 
-#Portfolio .card .card-image .card-caption {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    color: #fff;
-    font-size: 1.3em;
-    text-shadow: 0 2px 5px rgb(33 33 33 / 50%);
-    font-weight: 700;
-}
+
 
 .to-top {
     position: fixed;
