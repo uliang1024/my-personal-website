@@ -18,6 +18,14 @@ scrollAnimationBottom.forEach((el) => observer.observe(el));
 scrollAnimationLeft.forEach((el) => observer.observe(el));
 scrollAnimationRight.forEach((el) => observer.observe(el));
 
+$('#navbar').on('show.bs.collapse', function () {
+    header.classList.add("show");
+})
+
+$('#navbar').on('hide.bs.collapse', function () {
+    header.classList.remove("show");
+})
+
 window.addEventListener("scroll", () => {
     if (window.pageYOffset > 0) {
         header.classList.add("sticky");
