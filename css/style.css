@@ -437,7 +437,7 @@ h1 {
 
 /* -------------------------- */
 
-#Picture .btn {
+#Picture #filter-btn .btn {
     border: 2px solid var(--bs-gray-900);
     border-radius: 0;
     padding: 0.475rem 1rem;
@@ -446,6 +446,7 @@ h1 {
 
 #picture-filter #filter-img {
     overflow: hidden;
+    cursor: pointer; 
 }
 
 #picture-filter #filter-img.show {

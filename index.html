@@ -361,27 +361,48 @@
             <div id="picture-filter" class="container">
                 <div class="row ">
                     <div id="filter-img" class="col-lg-3 col-6 p-1" data-name="people">
-                        <div class="ratio ratio-1x1">
+                        <div class="ratio ratio-1x1" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <img src="https://i.imgur.com/M73uwpV.jpg" class="img-fluid rounded mx-auto d-block h-100"
                                 alt="...">
                         </div>
                     </div>
                     <div id="filter-img" class="col-lg-3 col-6 p-1" data-name="spectacle">
-                        <div class="ratio ratio-1x1">
+                        <div class="ratio ratio-1x1" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <img src="https://i.imgur.com/EG6PuuT.jpg" class="img-fluid rounded mx-auto d-block h-100"
                                 alt="...">
                         </div>
                     </div>
                     <div id="filter-img" class="col-lg-3 col-6 p-1" data-name="food">
-                        <div class="ratio ratio-1x1">
+                        <div class="ratio ratio-1x1" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <img src="https://i.imgur.com/EG6PuuT.jpg" class="img-fluid rounded mx-auto d-block h-100"
                                 alt="...">
                         </div>
                     </div>
                     <div id="filter-img" class="col-lg-3 col-6 p-1" data-name="spectacle">
-                        <div class="ratio ratio-1x1">
+                        <div class="ratio ratio-1x1" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <img src="https://i.imgur.com/M73uwpV.jpg" class="img-fluid rounded mx-auto d-block h-100"
                                 alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="img-modal">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
                         </div>
                     </div>
                 </div>
