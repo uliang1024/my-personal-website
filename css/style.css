@@ -205,37 +205,22 @@ h1 {
 }
 
 .btn1 {
-    height: 40px;
-    width: 145px;
-    outline: none;
-    border: none;
     background-color: white;
-    color: black;
-    border-radius: 4px;
 }
 
 .btn1:hover {
     background-color: transparent;
     color: white;
     border: 1px solid white;
-    transition: .5s;
 }
 
 .btn2 {
-    height: 40px;
-    width: 145px;
-    outline: none;
-    border: 1px solid white;
-    background-color: transparent;
     color: white;
     border-radius: 4px;
 }
 
 .btn2:hover {
     background-color: white;
-    color: black;
-    border: none;
-    transition: .5s;
 }
 
 #Learn a.card {
@@ -448,6 +433,44 @@ h1 {
     letter-spacing: 5px;
     margin: 10px 0 0 0;
     font-weight: normal;
+}
+
+/* -------------------------- */
+
+#Picture .btn {
+    border: 2px solid var(--bs-gray-900);
+    border-radius: 0;
+    padding: 0.475rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#picture-filter #filter-img {
+    overflow: hidden;
+}
+
+#picture-filter #filter-img.show {
+    animation: animate 0.4s ease;
+}
+@keyframes animate {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#picture-filter img {
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+#picture-filter img:hover {
+    transform: scale(1.1);
+}
+
+#picture-filter #filter-img.hide {
+    display: none;
 }
 
 /* -------------------------- */

@@ -1,3 +1,14 @@
+const header = document.querySelector('#header')
+const toTop = document.querySelector('.to-top')
+const scrollAnimationTop = document.querySelectorAll('.scroll-animation-top');
+const scrollAnimationBottom = document.querySelectorAll('.scroll-animation-bottom');
+const scrollAnimationLeft = document.querySelectorAll('.scroll-animation-left');
+const scrollAnimationRight = document.querySelectorAll('.scroll-animation-right');
+const filterBtn = document.querySelector('#filter-btn');
+const filterImg = document.querySelectorAll('#filter-img');
+
+//頁面動畫
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -6,17 +17,32 @@ const observer = new IntersectionObserver((entries) => {
     })
 })
 
-const header = document.querySelector('#header')
-const toTop = document.querySelector('.to-top')
-const scrollAnimationTop = document.querySelectorAll('.scroll-animation-top');
-const scrollAnimationBottom = document.querySelectorAll('.scroll-animation-bottom');
-const scrollAnimationLeft = document.querySelectorAll('.scroll-animation-left');
-const scrollAnimationRight = document.querySelectorAll('.scroll-animation-right');
-
 scrollAnimationTop.forEach((el) => observer.observe(el));
 scrollAnimationBottom.forEach((el) => observer.observe(el));
 scrollAnimationLeft.forEach((el) => observer.observe(el));
 scrollAnimationRight.forEach((el) => observer.observe(el));
+
+//照片篩選
+
+window.onload = () => {
+    filterBtn.onclick = (selectedItem) => {
+        if (selectedItem.target.classList.contains('btn-check')) {
+            let filterName = selectedItem.target.getAttribute('data-name');
+            filterImg.forEach((image) => {
+                let filterImg = image.getAttribute('data-name');
+                if ((filterImg == filterName) || filterName == 'all') {
+                    image.classList.remove('hide');
+                    image.classList.add('show');
+                } else {
+                    image.classList.add('hide');
+                    image.classList.remove('show');
+                }
+            })
+        }
+    }
+}
+
+//navbar 開關
 
 $('#navbar').on('show.bs.collapse', function () {
     header.classList.add("show");
@@ -25,6 +51,8 @@ $('#navbar').on('show.bs.collapse', function () {
 $('#navbar').on('hide.bs.collapse', function () {
     header.classList.remove("show");
 })
+
+//顯示 回到最上層
 
 window.addEventListener("scroll", () => {
     if (window.pageYOffset > 0) {
@@ -40,16 +68,7 @@ window.addEventListener("scroll", () => {
     }
 })
 
-function deleteNote(noteId) {
-    fetch('/delete-note', {
-        method: 'POST',
-        body: JSON.stringify({ noteId: noteId }),
-    }).then((_res) => {
-        window.location.href = "/";
-    });
-}
-
-// -----------------------
+// -----------時間流程------------
 
 $.fn.timeline = function () {
     var selectors = {
@@ -77,7 +96,7 @@ $.fn.timeline = function () {
                     "url(" + selectors.item.last().find(selectors.img).attr("src") + ")"
                 );
                 selectors.item.last().addClass(selectors.activeClass);
-            } else if (pos <= max - 40 && pos >= min - 100 ) {
+            } else if (pos <= max - 40 && pos >= min - 300) {
                 selectors.id.css(
                     "background-image",
                     "url(" + $(this).find(selectors.img).attr("src") + ")"
@@ -90,3 +109,5 @@ $.fn.timeline = function () {
 };
 
 $("#timeline-1").timeline();
+
+// -----------------------
