@@ -5,6 +5,7 @@ const scrollAnimationBottom = document.querySelectorAll('.scroll-animation-botto
 const scrollAnimationLeft = document.querySelectorAll('.scroll-animation-left');
 const scrollAnimationRight = document.querySelectorAll('.scroll-animation-right');
 const filterBtn = document.querySelector('#filter-btn');
+const modalBody = document.querySelector('.modal-body');
 //頁面動畫
 
 const observer = new IntersectionObserver((entries) => {
@@ -22,37 +23,76 @@ scrollAnimationRight.forEach((el) => observer.observe(el));
 
 //本地json檔讀取
 
-var requestURL = './post.json';
-var request = new XMLHttpRequest();
+let requestURL = './post.json';
+let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 request.onload = function () {
-    var superHeroes = request.response;
+    let superHeroes = request.response;
     showHeroes(superHeroes);
 }
 
 function showHeroes(jsonObj) {
-    var heroes = jsonObj['post'];
+    const heroes = jsonObj['post'];
 
-    var images = document.querySelector('#images');
+    const images = document.querySelector('#images');
 
     for (i = 0; i < heroes.length; i++) {
-        var div1 = document.createElement('div');
-        div1.classList.add('col-lg-3', 'col-6', 'p-1', 'filter-img');
+        let div1 = document.createElement('div');
+        div1.classList.add('col-lg-3', 'col-4', 'p-1', 'filter-img');
         div1.setAttribute('data-name', heroes[i].Type);
 
-        var div2 = document.createElement('div');
+        let div2 = document.createElement('div');
         div2.classList.add('ratio', 'ratio-1x1');
-        div2.setAttribute('data-bs-toggle', 'modal');
-        div2.setAttribute('data-bs-target', '#exampleModal');
 
         div1.appendChild(div2);
 
-        var img = document.createElement('img');
+        let img = document.createElement('img');
         img.setAttribute('src', heroes[i].Url);
         img.classList.add('img-fluid', 'rounded', 'mx-auto', 'd-block', 'h-100');
         img.setAttribute('alt', heroes[i].Title);
+
+        let superPowers = heroes[i].Url;
+
+        img.addEventListener('click', function () {
+            if (superPowers.length > 1) {
+                modalBody.innerHTML = 
+                    '<div id="carouselExampleIndicators" class="carousel carousel-dark slide w-100 h-100" data-bs-ride="carousel" data-bs-interval="false">' +
+                    '<div class="carousel-indicators"></div>' +
+                    '<div class="carousel-inner h-100">' +
+                    '</div>' +
+                    '<button class="carousel-control-prev" type="button"' +
+                    '    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">' +
+                    '    <span class="carousel-control-prev-icon" aria-hidden="true"></span>' +
+                    '    <span class="visually-hidden">Previous</span>' +
+                    '</button>' +
+                    '<button class="carousel-control-next" type="button"' +
+                    '    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">' +
+                    '    <span class="carousel-control-next-icon" aria-hidden="true"></span>' +
+                    '    <span class="visually-hidden">Next</span>' +
+                    '</button>' +
+                    '</div>';
+                for (j = 0; j < superPowers.length; j++) {
+                    document.querySelector('.carousel-inner').innerHTML += '<div class="carousel-item"><img src="" class="modal-img img-fluid rounded mx-auto d-block" alt=""></div>'
+                    document.querySelectorAll('.modal-img')[j].src = superPowers[j];
+                    document.querySelector('.carousel-indicators').innerHTML += '<button class="slide-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="' + j +'" aria-label="Slide' + j + '"></button>'
+                }
+                document.querySelector('.carousel-item').classList.add('active');
+                document.querySelector('.slide-btn').classList.add('active');
+                document.querySelector('.slide-btn').setAttribute('aria-current','true');
+            } else {
+                modalBody.innerHTML = '<img src="" class="modal-img img-fluid rounded mx-auto d-block" alt="">';
+                document.querySelector('.modal-img').src = superPowers;
+            }
+
+            const title = img.getAttribute('alt');
+            document.querySelector('.modal-title').innerHTML = title;
+
+            const myModal = new bootstrap.Modal(document.getElementById('gallery-modal'));
+            myModal.show();
+
+        });
 
         div2.appendChild(img);
 

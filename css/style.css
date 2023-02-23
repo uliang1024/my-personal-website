@@ -474,6 +474,26 @@ h1 {
     display: none;
 }
 
+#img-modal .modal-img {
+    max-height: 79vh;
+}
+
+@media (min-width: 767.98px) {
+    #img-modal .modal-content {
+        height: 90vh;
+    }
+}
+
+.carousel-inner > .carousel-item {
+    height: 100%;
+}
+
+.carousel-inner .carousel-item img {
+    position:relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
 /* -------------------------- */
 
 #Contact {
