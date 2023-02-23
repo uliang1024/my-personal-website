@@ -444,12 +444,12 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
-#picture-filter #filter-img {
+#picture-filter .filter-img {
     overflow: hidden;
     cursor: pointer; 
 }
 
-#picture-filter #filter-img.show {
+#picture-filter .filter-img.show {
     animation: animate 0.4s ease;
 }
 @keyframes animate {
@@ -470,7 +470,7 @@ h1 {
     transform: scale(1.1);
 }
 
-#picture-filter #filter-img.hide {
+#picture-filter .filter-img.hide {
     display: none;
 }
 

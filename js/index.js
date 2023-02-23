@@ -5,8 +5,6 @@ const scrollAnimationBottom = document.querySelectorAll('.scroll-animation-botto
 const scrollAnimationLeft = document.querySelectorAll('.scroll-animation-left');
 const scrollAnimationRight = document.querySelectorAll('.scroll-animation-right');
 const filterBtn = document.querySelector('#filter-btn');
-const filterImg = document.querySelectorAll('#filter-img');
-
 //頁面動畫
 
 const observer = new IntersectionObserver((entries) => {
@@ -22,9 +20,52 @@ scrollAnimationBottom.forEach((el) => observer.observe(el));
 scrollAnimationLeft.forEach((el) => observer.observe(el));
 scrollAnimationRight.forEach((el) => observer.observe(el));
 
+//本地json檔讀取
+
+var requestURL = './post.json';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+request.onload = function () {
+    var superHeroes = request.response;
+    showHeroes(superHeroes);
+}
+
+function showHeroes(jsonObj) {
+    var heroes = jsonObj['post'];
+
+    var images = document.querySelector('#images');
+
+    for (i = 0; i < heroes.length; i++) {
+        var div1 = document.createElement('div');
+        div1.classList.add('col-lg-3', 'col-6', 'p-1', 'filter-img');
+        div1.setAttribute('data-name', heroes[i].Type);
+
+        var div2 = document.createElement('div');
+        div2.classList.add('ratio', 'ratio-1x1');
+        div2.setAttribute('data-bs-toggle', 'modal');
+        div2.setAttribute('data-bs-target', '#exampleModal');
+
+        div1.appendChild(div2);
+
+        var img = document.createElement('img');
+        img.setAttribute('src', heroes[i].Url);
+        img.classList.add('img-fluid', 'rounded', 'mx-auto', 'd-block', 'h-100');
+        img.setAttribute('alt', heroes[i].Title);
+
+        div2.appendChild(img);
+
+        images.appendChild(div1);
+    }
+}
+
 //照片篩選
 
 window.onload = () => {
+
+    const filterImg = document.querySelectorAll('.filter-img');
+
     filterBtn.onclick = (selectedItem) => {
         if (selectedItem.target.classList.contains('btn-check')) {
             let filterName = selectedItem.target.getAttribute('data-name');
