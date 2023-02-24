@@ -53,7 +53,6 @@
 .navbar-brand {
     position: relative;
     font-weight: 500;
-    color: var(--bs-white);
     text-decoration: none;
     font-size: 2em;
     letter-spacing: 2px;
@@ -62,11 +61,12 @@
 }
 
 #Home {
-    background-image: url(../images/boyBg.JPG);
+    /* background-image: url(../images/boyBg.JPG);
     background-size: cover;
     background-repeat: repeat-y;
     background-position: center center;
-    background-attachment: fixed;
+    background-attachment: fixed; */
+    background-color: var(--bs-emphasis-color);
 }
 
 #Home img {
@@ -83,7 +83,7 @@
         left: 0;
         right: 0;
         height: calc(50% + 20px);
-        background-color: #fff;
+        background-color: var(--bs-body-bg);
     }
 }
 
@@ -492,6 +492,13 @@ h1 {
     position:relative;
     top:50%;
     transform: translateY(-50%);
+}
+#img-modal .modal-body {
+    padding: 0;
+}
+
+.modal-backdrop.show {
+    opacity: 0.9;
 }
 
 /* -------------------------- */

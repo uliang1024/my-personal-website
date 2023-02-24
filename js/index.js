@@ -53,37 +53,43 @@ function showHeroes(jsonObj) {
         img.classList.add('img-fluid', 'rounded', 'mx-auto', 'd-block', 'h-100');
         img.setAttribute('alt', heroes[i].Title);
 
-        let superPowers = heroes[i].Url;
+        let url = heroes[i].Url;
+        let type = heroes[i].Type;
 
         img.addEventListener('click', function () {
-            if (superPowers.length > 1) {
-                modalBody.innerHTML = 
-                    '<div id="carouselExampleIndicators" class="carousel carousel-dark slide w-100 h-100" data-bs-ride="carousel" data-bs-interval="false">' +
-                    '<div class="carousel-indicators"></div>' +
-                    '<div class="carousel-inner h-100">' +
-                    '</div>' +
-                    '<button class="carousel-control-prev" type="button"' +
-                    '    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">' +
-                    '    <span class="carousel-control-prev-icon" aria-hidden="true"></span>' +
-                    '    <span class="visually-hidden">Previous</span>' +
-                    '</button>' +
-                    '<button class="carousel-control-next" type="button"' +
-                    '    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">' +
-                    '    <span class="carousel-control-next-icon" aria-hidden="true"></span>' +
-                    '    <span class="visually-hidden">Next</span>' +
-                    '</button>' +
-                    '</div>';
-                for (j = 0; j < superPowers.length; j++) {
-                    document.querySelector('.carousel-inner').innerHTML += '<div class="carousel-item"><img src="" class="modal-img img-fluid rounded mx-auto d-block" alt=""></div>'
-                    document.querySelectorAll('.modal-img')[j].src = superPowers[j];
-                    document.querySelector('.carousel-indicators').innerHTML += '<button class="slide-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="' + j +'" aria-label="Slide' + j + '"></button>'
-                }
-                document.querySelector('.carousel-item').classList.add('active');
-                document.querySelector('.slide-btn').classList.add('active');
-                document.querySelector('.slide-btn').setAttribute('aria-current','true');
+            if (type === 'video') {
+                modalBody.innerHTML = '<iframe src="" class="modal-video w-100 h-100" title="YouTube video" allowfullscreen></iframe>';
+                document.querySelector('.modal-video').src = url[1];
             } else {
-                modalBody.innerHTML = '<img src="" class="modal-img img-fluid rounded mx-auto d-block" alt="">';
-                document.querySelector('.modal-img').src = superPowers;
+                if (url.length > 1) {
+                    modalBody.innerHTML =
+                        '<div id="carouselExampleIndicators" class="carousel slide w-100 h-100" data-bs-ride="carousel" data-bs-interval="false">' +
+                        '<div class="carousel-indicators"></div>' +
+                        '<div class="carousel-inner h-100">' +
+                        '</div>' +
+                        '<button class="carousel-control-prev" type="button"' +
+                        '    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">' +
+                        '    <span class="carousel-control-prev-icon" aria-hidden="true"></span>' +
+                        '    <span class="visually-hidden">Previous</span>' +
+                        '</button>' +
+                        '<button class="carousel-control-next" type="button"' +
+                        '    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">' +
+                        '    <span class="carousel-control-next-icon" aria-hidden="true"></span>' +
+                        '    <span class="visually-hidden">Next</span>' +
+                        '</button>' +
+                        '</div>';
+                    for (j = 0; j < url.length; j++) {
+                        document.querySelector('.carousel-inner').innerHTML += '<div class="carousel-item"><img src="" class="modal-img img-fluid mx-auto d-block" alt=""></div>'
+                        document.querySelectorAll('.modal-img')[j].src = url[j];
+                        document.querySelector('.carousel-indicators').innerHTML += '<button class="slide-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="' + j + '" aria-label="Slide' + j + '"></button>'
+                    }
+                    document.querySelector('.carousel-item').classList.add('active');
+                    document.querySelector('.slide-btn').classList.add('active');
+                    document.querySelector('.slide-btn').setAttribute('aria-current', 'true');
+                } else {
+                    modalBody.innerHTML = '<img src="" class="modal-img img-fluid mx-auto d-block" alt="">';
+                    document.querySelector('.modal-img').src = url;
+                }
             }
 
             const title = img.getAttribute('alt');
@@ -99,6 +105,10 @@ function showHeroes(jsonObj) {
         images.appendChild(div1);
     }
 }
+
+document.querySelector('#gallery-modal').addEventListener('hidden.bs.modal', function (event) {
+    modalBody.innerHTML = '';
+})
 
 //照片篩選
 
@@ -132,6 +142,11 @@ $('#navbar').on('show.bs.collapse', function () {
 $('#navbar').on('hide.bs.collapse', function () {
     header.classList.remove("show");
 })
+
+//明暗模式
+
+
+
 
 //顯示 回到最上層
 

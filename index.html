@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="light">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <script src="https://kit.fontawesome.com/9d9793c2ef.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -14,7 +13,7 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navbar">
     <div id="header" class="fixed-top bg-dark p-2 text-dark">
-        <nav class="navbar navbar-expand-lg navbar-dark opacity-100">
+        <nav class="navbar navbar-expand-lg opacity-100" data-bs-theme="dark">
             <div class="container scroll-animation-top">
                 <a href="#" class="navbar-brand">UliangBlog</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
@@ -33,41 +32,47 @@
                             <a class="nav-link" href="#Learn">學習</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#Life">生活</a>
+                            <a class="nav-link" href="#Picture">生活</a>
                         </li>
                     </ul>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="switch-check">
+                        <label class="form-check-label" for="switch-check">Default switch checkbox input</label>
+                    </div>
                 </div>
             </div>
         </nav>
     </div>
 
     <section id="Home" class="overflow-hidden">
-        <div class="container py-5">
-            <div class="row mt-5 text-light">
-                <div class="col-xl-9 col-lg-8 order-lg-2 py-3">
-                    <h1 class="scroll-animation-right">陳友亮 </h1>
-                    <p>國立台北商業大學 二技資訊管理系</p>
+        <div class="">
+            <div class="container py-5">
+                <div class="row mt-5 text-light">
+                    <div class="col-xl-9 col-lg-8 order-lg-2 py-3">
+                        <h1 class="scroll-animation-right">陳友亮 </h1>
+                        <p>國立台北商業大學 二技資訊管理系</p>
 
-                    <div class="row pim">
-                        <div class="col-md-6">
-                            <p>生日 : <span>2000年10月24日</span></p>
-                            <p>性別 : <span>男</span></p>
-                            <p>連絡電話 : <span>0974141514</span></p>
+                        <div class="row pim">
+                            <div class="col-md-6">
+                                <p>生日 : <span>2000年10月24日</span></p>
+                                <p>性別 : <span>男</span></p>
+                                <p>連絡電話 : <span>0974141514</span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Email : <span>amisleo000@gmail.com</span></p>
+                                <p>學歷 : <span>學士學位</span></p>
+                                <p>居住地 : <span>桃園市</span></p>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <p>Email : <span>amisleo000@gmail.com</span></p>
-                            <p>學歷 : <span>學士學位</span></p>
-                            <p>居住地 : <span>桃園市</span></p>
+                        <div class="btns">
+                            <a type="button" class="btn btn1" value="Download C.V">Download C.V</a>
+                            <a href="#Contact" type="button" class="btn btn2" value="Contact Me">Contact Me</a>
                         </div>
                     </div>
-                    <div class="btns">
-                        <a type="button" class="btn btn1" value="Download C.V">Download C.V</a>
-                        <a href="#Contact" type="button" class="btn btn2" value="Contact Us">Contact Us</a>
-                    </div>
-                </div>
 
-                <div class="col-xl-3 col-lg-4 scroll-animation-left order-lg-1 ">
-                    <img class="img-fluid" src="images/handsomeBoy.JPG" alt="">
+                    <div class="col-xl-3 col-lg-4 scroll-animation-left order-lg-1 ">
+                        <img class="img-fluid" src="images/handsomeBoy.JPG" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -359,8 +364,12 @@
                 <label class="btn btn-outline-dark btn-lg" for="btnradio4">風景</label>
 
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off"
+                    data-name="video">
+                <label class="btn btn-outline-dark btn-lg" for="btnradio5">影片</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off"
                     data-name="other">
-                <label class="btn btn-outline-dark btn-lg" for="btnradio5">其他</label>
+                <label class="btn btn-outline-dark btn-lg" for="btnradio6">其他</label>
             </div>
             <div id="picture-filter" class="container">
                 <div class="row" id="images">
@@ -370,15 +379,13 @@
                 <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-fullscreen-md-down">
-                        <div class="modal-content bg-light">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalToggleLabel">Modal 2</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        <div class="modal-content border-0 bg-transparent">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title text-white" id="exampleModalToggleLabel">Modal 2</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body d-flex align-items-center">
-                                <img src="" class="modal-img img-fluid rounded mx-auto d-block" alt="">
-                                
                             </div>
                         </div>
                     </div>
@@ -418,16 +425,17 @@
                                 amisleo000@gmail.com </p>
                             <div class="row">
                                 <div class="col d-flex justify-content-center">
-                                    <a class="font-monospace float-start fs-5" href="#"><i
-                                            class="fab fa-facebook-f"></i></a>
+                                    <a class="font-monospace float-start fs-5"
+                                        href="https://www.facebook.com/amis.leo/"><i class="fab fa-facebook-f"></i></a>
                                 </div>
                                 <div class="col d-flex justify-content-center">
-                                    <a class="font-monospace float-start fs-5" href="#"><i
+                                    <a class="font-monospace float-start fs-5"
+                                        href="https://www.instagram.com/uliang0230/"><i
                                             class="fab fa-instagram"></i></a>
                                 </div>
                                 <div class="col d-flex justify-content-center">
-                                    <a class="font-monospace float-start fs-5" href="#"><i
-                                            class="fab fa-google-plus-g"></i></a>
+                                    <a class="font-monospace float-start fs-5" href="https://github.com/uliang1024"><i
+                                            class="fa-brands fa-github"></i></a>
                                 </div>
                             </div>
                             <hr>
@@ -449,12 +457,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"
-        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
-        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
-        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./js/popper.min.js"></script>
+        <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script defer type="text/javascript" src="./js/index.js"></script>
 
 </body>
