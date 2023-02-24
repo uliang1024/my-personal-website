@@ -145,6 +145,8 @@ $('#navbar').on('hide.bs.collapse', function () {
 
 //明暗模式
 
+const darkSwitch = document.querySelector('#dark-switch');
+
 
 
 

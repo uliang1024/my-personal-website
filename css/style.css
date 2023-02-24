@@ -40,6 +40,7 @@
 #header {
     --bs-bg-opacity: 0;
     transition: all .6s;
+    background-color: rgba(var(--bs-body-color-rgb), var(--bs-bg-opacity)) !important;
 }
 
 #header.show {
@@ -48,6 +49,21 @@
 
 #header.sticky {
     --bs-bg-opacity: 0.75;
+}
+
+#header .nav-link {
+    color: var(--bs-tertiary-bg);
+}
+
+#header .nav-link.active {
+    color: var(--bs-body-bg);
+    font-weight: 900;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+#header .navbar-toggler {
+    border: var(--bs-border-width) solid var(--bs-secondary-bg);
 }
 
 .navbar-brand {
@@ -60,13 +76,20 @@
     padding: 5px;
 }
 
+.bi {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    fill: currentcolor;
+}
+
 #Home {
-    /* background-image: url(../images/boyBg.JPG);
+    background-image: url(../images/boyBg.JPG);
     background-size: cover;
     background-repeat: repeat-y;
     background-position: center center;
-    background-attachment: fixed; */
-    background-color: var(--bs-emphasis-color);
+    background-attachment: fixed;
+    /* background-color: var(--bs-emphasis-color); */
 }
 
 #Home img {
@@ -88,14 +111,35 @@
 }
 
 #Home .pim p {
-    font-weight: 600;
+    font-weight: 700;
     border-bottom: 1px solid var(--bs-secondary);
 }
 
 #Home .pim p span {
-    font-weight: 300;
-    color: var(--bs-gray-400);
+    font-weight: 600;
     margin-left: 4px;
+}
+
+.btn1 {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-emphasis-color);
+}
+
+.btn1:hover {
+    background-color: transparent;
+    color: var(--bs-body-bg);
+    border: 1px solid var(--bs-body-bg);
+}
+
+.btn2 {
+    color: var(--bs-body-bg);
+    border-radius: 4px;
+    border: 1px solid var(--bs-body-bg);
+}
+
+.btn2:hover {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-emphasis-color);
 }
 
 @media (max-width: 991px) {
@@ -110,13 +154,16 @@
     box-shadow: 6px 4px 41px -24px rgba(0, 0, 0, 0.75);
 }
 
+#About .progress span {
+    color: var(--bs-body-bg);
+}
+
 h1 {
     font-size: 3rem;
     font-weight: 900;
 }
 
 .progress {
-    background-color: rgb(223, 219, 219);
     justify-content: flex-start;
     border-radius: 50px;
     align-items: center;
@@ -130,7 +177,7 @@ h1 {
 .pro-value1 {
     animation: load1 3s normal forwards;
     border-radius: 50px;
-    background-color: black;
+    background-color: var(--bs-body-color);
     height: 25px;
     width: 0;
 }
@@ -138,7 +185,7 @@ h1 {
 .pro-value2 {
     animation: load2 3s normal forwards;
     border-radius: 50px;
-    background-color: black;
+    background-color: var(--bs-body-color);
     height: 25px;
     width: 0;
 }
@@ -146,7 +193,7 @@ h1 {
 .pro-value3 {
     animation: load3 3s normal forwards;
     border-radius: 50px;
-    background-color: black;
+    background-color: var(--bs-body-color);
     height: 25px;
     width: 0;
 }
@@ -154,13 +201,13 @@ h1 {
 .pro-value4 {
     animation: load4 3s normal forwards;
     border-radius: 50px;
-    background-color: black;
+    background-color: var(--bs-body-color);
     height: 25px;
     width: 0;
 }
 
 .progress p {
-    color: white;
+    color: var(--bs-body-bg);
     padding: 5px;
 }
 
@@ -202,25 +249,6 @@ h1 {
     100% {
         width: 92%;
     }
-}
-
-.btn1 {
-    background-color: white;
-}
-
-.btn1:hover {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-}
-
-.btn2 {
-    color: white;
-    border-radius: 4px;
-}
-
-.btn2:hover {
-    background-color: white;
 }
 
 #Learn a.card {
@@ -438,24 +466,36 @@ h1 {
 /* -------------------------- */
 
 #Picture #filter-btn .btn {
-    border: 2px solid var(--bs-gray-900);
+    border: 2px solid var(--bs-body-color);
     border-radius: 0;
     padding: 0.475rem 1rem;
     margin-bottom: 1.5rem;
+    --bs-btn-color: var(--bs-emphasis-color);
 }
 
-#picture-filter .filter-img {
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    color: var(--bs-body-bg);
+    background-color: var(--bs-emphasis-color);
+}
+
+#Picture #filter-btn #picture-filter .filter-img {
     overflow: hidden;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 #picture-filter .filter-img.show {
     animation: animate 0.4s ease;
 }
+
 @keyframes animate {
     0% {
         transform: scale(0.5);
     }
+
     100% {
         transform: scale(1);
     }
@@ -484,15 +524,16 @@ h1 {
     }
 }
 
-.carousel-inner > .carousel-item {
+.carousel-inner>.carousel-item {
     height: 100%;
 }
 
 .carousel-inner .carousel-item img {
-    position:relative;
-    top:50%;
+    position: relative;
+    top: 50%;
     transform: translateY(-50%);
 }
+
 #img-modal .modal-body {
     padding: 0;
 }
@@ -504,16 +545,17 @@ h1 {
 /* -------------------------- */
 
 #Contact {
-    background-color: var(--bs-gray-600);
-    color: var(--bs-white);
+    background-color: var(--bs-tertiary-color);
+    color: var(--bs-body-bg);
 }
 
 #Contact .heading {
-    border-bottom: 2px dotted var(--bs-white);
+    border-bottom: 2px dotted var(--bs-body-bg);
+    color: var(--bs-body-bg);
 }
 
 #Contact .btn-outline-info {
-    color: var(--bs-white);
+    color: var(--bs-body-bg);
     letter-spacing: 2px;
     transition: all 0.5s ease-in-out;
 }
@@ -523,7 +565,7 @@ h1 {
 }
 
 #Contact a {
-    color: var(--bs-white);
+    color: var(--bs-body-bg);
 }
 
 #Contact a:hover {
@@ -534,10 +576,10 @@ h1 {
     position: fixed;
     width: 50px;
     height: 50px;
-    background: var(--bs-dark);
+    background: var(--bs-emphasis-color);
     bottom: 5px;
     right: 10px;
-    color: var(--bs-white);
+    color: var(--bs-body-bg);
     font-size: 22px;
     border: none;
     cursor: pointer;
@@ -557,8 +599,8 @@ h1 {
 }
 
 .to-top:hover {
-    background: var(--bs-white);
-    color: var(--bs-dark);
+    background: var(--bs-body-bg);
+    color: var(--bs-emphasis-color);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -575,4 +617,12 @@ h1 {
     opacity: 1;
     filter: blur(0);
     transform: translate(0);
+}
+
+[data-bs-theme="light"] .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+[data-bs-theme="dark"] .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
