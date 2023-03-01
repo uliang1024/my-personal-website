@@ -63,7 +63,7 @@ function showHeroes(jsonObj) {
             } else {
                 if (url.length > 1) {
                     modalBody.innerHTML =
-                        '<div id="carouselExampleIndicators" class="carousel slide w-100 h-100" data-bs-ride="carousel" data-bs-interval="false">' +
+                        '<div id="carouselExampleIndicators" class="carousel slide w-100 h-100" data-bs-ride="carousel" data-interval="false">' +
                         '<div class="carousel-indicators"></div>' +
                         '<div class="carousel-inner h-100">' +
                         '</div>' +
