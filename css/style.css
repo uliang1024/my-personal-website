@@ -542,35 +542,138 @@ h1 {
     opacity: 0.9;
 }
 
-/* -------------------------- */
+/* ------------Contact-------------- */
 
 #Contact {
-    background-color: var(--bs-tertiary-color);
-    color: var(--bs-body-bg);
+    background: var(--bs-tertiary-bg);
+    color: var(--bs-body-color);
 }
 
-#Contact .heading {
-    border-bottom: 2px dotted var(--bs-body-bg);
-    color: var(--bs-body-bg);
-}
-
-#Contact .btn-outline-info {
-    color: var(--bs-body-bg);
-    letter-spacing: 2px;
-    transition: all 0.5s ease-in-out;
-}
-
-#Contact .btn-outline-info:hover {
-    transform: scale(1.05);
+#Contact .button {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    overflow: hidden;
+    background: var(--bs-body-bg);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
 }
 
 #Contact a {
-    color: var(--bs-body-bg);
+    text-decoration: none;
+    color: var(--bs-body-color);
 }
 
-#Contact a:hover {
-    color: var(--bs-gray-700);
+#Contact .button:hover {
+    width: 250px;
 }
+
+#Contact .button .icon {
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 70px;
+    transition: all 0.3 ease-out;
+}
+
+#Contact .button:nth-child(1):hover .icon {
+    background: #499F68;
+}
+
+#Contact .button:nth-child(2):hover .icon {
+    background: #157A6E;
+}
+
+#Contact .button:nth-child(3):hover .icon {
+    background: #4267B2;
+}
+
+#Contact .button:nth-child(4):hover .icon {
+    background: #C13584;
+}
+
+#Contact .button:nth-child(5):hover .icon {
+    background: #1d1a1a;
+}
+
+#Contact .button .icon i {
+    font-size: 25px;
+    line-height: 70px;
+    transition: all 0.3s ease-out;
+}
+
+#Contact .button:hover .icon i {
+    color: #fff;
+}
+
+#Contact .button span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 70px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+}
+
+#Contact .button:nth-child(1) span {
+    color: #499F68;
+}
+
+#Contact .button:nth-child(2) span {
+    color: #157A6E;
+}
+
+#Contact .button:nth-child(3) span {
+    color: #4267B2;
+}
+
+#Contact .button:nth-child(4) span {
+    color: #C13584;
+}
+
+#Contact .button:nth-child(5) span {
+    color: var(--bs-body-color);
+}
+
+@media (max-width: 576px) {
+    #Contact #wrapper {
+        flex-direction: column;
+    }
+
+    #Contact .button {
+        width: 250px;
+    }
+
+    #Contact .button .icon i {
+        color: #fff;
+    }
+
+    #Contact .button:nth-child(1) .icon {
+        background: #499F68;
+    }
+
+    #Contact .button:nth-child(2) .icon {
+        background: #157A6E;
+    }
+
+    #Contact .button:nth-child(3) .icon {
+        background: #4267B2;
+    }
+
+    #Contact .button:nth-child(4) .icon {
+        background: #C13584;
+    }
+
+    #Contact .button:nth-child(5) .icon {
+        background: #1d1a1a;
+    }
+}
+
 
 .to-top {
     position: fixed;
@@ -619,10 +722,10 @@ h1 {
     transform: translate(0);
 }
 
-[data-bs-theme="light"] .navbar-toggler-icon{
+[data-bs-theme="light"] .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-[data-bs-theme="dark"] .navbar-toggler-icon{
+[data-bs-theme="dark"] .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }

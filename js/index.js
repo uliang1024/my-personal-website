@@ -31,6 +31,7 @@ request.send();
 request.onload = function () {
     let superHeroes = request.response;
     showHeroes(superHeroes);
+    filterBtnBuild();
 }
 
 function showHeroes(jsonObj) {
@@ -112,7 +113,7 @@ document.querySelector('#gallery-modal').addEventListener('hidden.bs.modal', fun
 
 //照片篩選
 
-window.onload = () => {
+function filterBtnBuild() {
 
     const filterImg = document.querySelectorAll('.filter-img');
 
