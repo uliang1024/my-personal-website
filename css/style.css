@@ -732,14 +732,30 @@ h1 {
 
 /* -------------------Resume---------------------- */
 
+@media (min-width: 576px) {
+    #resume {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 #resume .page {
     background: white;
     box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 }
 
 #resume .page[size="A4"] {
-    width: 21cm;
-    height: 29.7cm;
+    width: auto;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    #resume .page[size="A4"] {
+
+        width: 21cm;
+        height: 29.7cm;
+    }
 }
 
 #resume .profileText {
@@ -756,14 +772,13 @@ h1 {
     border-radius: 50%;
 }
 
-#resume h2 {
+#resume  h2 {
     font-size: 1.5em;
-    margin-top: 20px;
     font-weight: 600;
     line-height: 1.4em;
 }
 
-#resume h2 span {
+#resume  h2 span {
     font-size: 0.8em;
     font-weight: 300;
 }
@@ -782,7 +797,7 @@ h1 {
     padding: 0;
 }
 
-#resume .left_Side ul li {
+#resume ul li {
     list-style: none;
     margin: 10px 0;
     cursor: pointer;
@@ -791,7 +806,7 @@ h1 {
     white-space: nowrap;
 }
 
-#resume .left_Side ul li i {
+#resume ul li i {
     width: 20px;
     color: #03a9f4;
 }
@@ -829,7 +844,6 @@ h1 {
 }
 
 #resume .about .box {
-    display: flex;
     margin: 15px 0;
 }
 
@@ -845,33 +859,76 @@ h1 {
     font-weight: 800;
 }
 
-#resume .skills .box {
+#resume  .box {
     display: grid;
     grid-template-columns: 150px 1fr;
     justify-content: center;
     align-items: center;
 }
 
-#resume .skills .box h4 {
+#resume  .box h4 {
     text-transform: uppercase;
     color: #848c99;
     font-size: 16px;
 }
 
-#resume .skills .box .percent {
+#resume  .box .percent {
     position: relative;
     height: 10px;
     background: #f0f0f0;
     border-radius: 50px;
 }
 
-#resume .skills .box .percent div{
+#resume  .box .percent div {
     height: 100%;
     background: #03a9f4;
     border-radius: 50px;
 }
 
+#resume  .box .percent span {
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+
 #resume .interest i {
     color: #03a9f4;
     font-size: 18px;
+}
+
+span.spacer:after {
+    display:inline-block;
+    width:100%;
+    content:".";
+    font-size:0;
+    height:2px;
+    background:#000;
+}
+
+#page2 #dividing_line {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+}
+
+@media (min-width: 768px) {
+    #page2 #dividing_line {
+        width: 1px;
+        height: 99%;
+        left: 50%;
+        top: 0;
+    }
+}
+
+#page2 ul li {
+    margin: 4px 0;
+}
+
+#page2 .box {
+    padding-inline: 0.25em;
+}
+
+#page2 .box .percent {
+    margin-bottom: 0.5rem;
 }
