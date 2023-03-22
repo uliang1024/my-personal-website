@@ -62,7 +62,7 @@
     padding-left: 1rem;
 }
 
-#header .navbar-toggler {
+.navbar-toggler {
     border: var(--bs-border-width) solid var(--bs-secondary-bg);
 }
 
@@ -732,6 +732,86 @@ h1 {
 
 /* -------------------Resume---------------------- */
 
+#colorlib-page {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* #colorlib-aside {
+    width: 400px;
+    position: fixed;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.04);
+    transition: all 0.5s ease;
+} */
+
+@media (min-width: 1200px) {
+    #colorlib-aside {
+        display: block!important;
+    }
+}
+
+#colorlib-aside #colorlib-main-menu ul li {
+    margin: 0 0 15px 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 700;
+}
+
+#colorlib-aside #colorlib-main-menu ul li a {
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    position: relative;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+#colorlib-aside #colorlib-main-menu ul li a:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: 7px;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#colorlib-aside #colorlib-main-menu ul li a:hover {
+    color: black;
+}
+
+#colorlib-aside #colorlib-main-menu ul li a:hover:after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+#colorlib-aside #colorlib-main-menu ul li.colorlib-active a {
+    color: #000;
+}
+
+#colorlib-aside #colorlib-main-menu ul li.colorlib-active a:after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.colorlib-main {
+    width: 100%;
+    float: right;
+    transition: all 0.5s ease;
+}
+
+@media (min-width: 1200px) {
+    .colorlib-main {
+        width: calc(100% - 400px);
+    }
+}
+
+/* -------------------Sidebar---------------------- */
+
 @media (min-width: 576px) {
     #resume {
         display: flex;
@@ -772,13 +852,13 @@ h1 {
     border-radius: 50%;
 }
 
-#resume  h2 {
+#resume h2 {
     font-size: 1.5em;
     font-weight: 600;
     line-height: 1.4em;
 }
 
-#resume  h2 span {
+#resume h2 span {
     font-size: 0.8em;
     font-weight: 300;
 }
@@ -859,33 +939,33 @@ h1 {
     font-weight: 800;
 }
 
-#resume  .box {
+#resume .box {
     display: grid;
     grid-template-columns: 150px 1fr;
     justify-content: center;
     align-items: center;
 }
 
-#resume  .box h4 {
+#resume .box h4 {
     text-transform: uppercase;
     color: #848c99;
     font-size: 16px;
 }
 
-#resume  .box .percent {
+#resume .box .percent {
     position: relative;
     height: 10px;
     background: #f0f0f0;
     border-radius: 50px;
 }
 
-#resume  .box .percent div {
+#resume .box .percent div {
     height: 100%;
     background: #03a9f4;
     border-radius: 50px;
 }
 
-#resume  .box .percent span {
+#resume .box .percent span {
     position: absolute;
     right: 0;
     top: -10px;
@@ -897,12 +977,12 @@ h1 {
 }
 
 span.spacer:after {
-    display:inline-block;
-    width:100%;
-    content:".";
-    font-size:0;
-    height:2px;
-    background:#000;
+    display: inline-block;
+    width: 100%;
+    content: ".";
+    font-size: 0;
+    height: 2px;
+    background: #000;
 }
 
 #page2 #dividing_line {
