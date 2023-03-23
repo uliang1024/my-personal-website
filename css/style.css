@@ -740,7 +740,7 @@ h1 {
 
 @media (min-width: 1200px) {
     #colorlib-aside {
-        display: block!important;
+        display: block !important;
     }
 }
 
@@ -824,9 +824,13 @@ h1 {
 
 @media (min-width: 768px) {
     #resume .page[size="A4"] {
-        margin-top: 1rem;
-        width: 21cm;
-        height: 29.7cm;
+        width: 210mm;
+        min-height: 297mm;
+        margin: 10mm auto;
+        border: 1px #D3D3D3 solid;
+        border-radius: 5px;
+        background: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -1003,4 +1007,57 @@ span.spacer:after {
 
 #page2 .box .percent {
     margin-bottom: 0.5rem;
+}
+
+
+/* ------------------print----------------- */
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+
+    html,
+    body {
+        padding: 0;
+        width: 210mm;
+        height: 297mm;
+    }
+
+    #resume .page[size="A4"] {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: 210mm;
+        height: 297mm;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+
+    .col-md-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .col-md-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+
+    .no-print {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+.print-background {
+    -webkit-print-color-adjust: exact;
 }

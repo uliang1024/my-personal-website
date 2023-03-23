@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-bs-theme="light">
+<html>
 
 <head>
     <meta charset="utf-8" />
@@ -13,28 +13,28 @@
 
 <body style="background: var(--bs-secondary-bg);" data-bs-spy="scroll" data-bs-target="#colorlib-aside">
     <div id="colorlib-page">
-        <button class="offcanvas-btn offcanvas-toggler position-fixed p-3 border-0 z-3" type="button" data-bs-toggle="offcanvas"
+        <button class="offcanvas-btn offcanvas-toggler position-fixed p-3 border-0 z-3 no-print" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#colorlib-aside" aria-controls="colorlib-aside" style="background: transparent;"><i class="fa-solid fa-bars fa-2x"
             style="color: #000;"></i></button>
-        <div id="colorlib-aside" class="offcanvas offcanvas-start text-center p-5" style="background: #fff;" data-bs-scroll="true"
+        <div id="colorlib-aside" class="offcanvas offcanvas-start text-center p-5 no-print" style="background: #fff;" data-bs-scroll="true"
             data-bs-backdrop="false" tabindex="-1" aria-labelledby="offcanvasScrollingLabel">
             <h1 id="colorlib-title" class="mb-5">目錄</h1>
             <button type="button" class="offcanvas-btn btn-close position-absolute top-0 end-0 p-3 fs-3" data-bs-dismiss="offcanvas"
                 aria-label="Close"></button>
             <nav id="colorlib-main-menu">
                 <ul class="navbar-nav nav p-0">
-                    <li class="nav-item"><a class="nav-link active" href="#page1">簡歷</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#page2">作品集</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">證照</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">下載PDF</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/uliangBlog/">UliangBlog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#page1" >簡歷</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#page2" >作品集</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" >證照</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="print-a4" >下載PDF</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/uliangBlog/" >UliangBlog</a></li>
                 </ul>
             </nav>
         </div>
-        <div id="resume" class="colorlib-main">
+        <div id="resume" class="colorlib-main print-background">
             <div>
                 <div id="page1" class="page row gx-0" size="A4">
-                    <div class="left_Side col-md-4 p-4" style="background: #003147; color:#fff">
+                    <div class="left_Side col-md-4 p-4 print-background" style="background: #003147; color:#fff">
                         <div class="profileText text-center">
                             <div class="imgBx">
                                 <div class="ratio ratio-1x1">
@@ -154,37 +154,37 @@
                             <h2 class="title2">專業技能</h2>
                             <div class="box">
                                 <h4>HTML / CSS</h4>
-                                <div class="percent">
+                                <div class="percent ">
                                     <div style="width: 90%;"></div>
                                 </div>
                             </div>
                             <div class="box">
                                 <h4>JAVASCRIPT</h4>
-                                <div class="percent">
+                                <div class="percent ">
                                     <div style="width: 85%;"></div>
                                 </div>
                             </div>
                             <div class="box">
                                 <h4>Bootstrap</h4>
-                                <div class="percent">
+                                <div class="percent ">
                                     <div style="width: 85%;"></div>
                                 </div>
                             </div>
                             <div class="box">
                                 <h4>MySQL</h4>
-                                <div class="percent">
+                                <div class="percent ">
                                     <div style="width: 75%;"></div>
                                 </div>
                             </div>
                             <div class="box">
                                 <h4>Java</h4>
-                                <div class="percent">
+                                <div class="percent ">
                                     <div style="width: 85%;"></div>
                                 </div>
                             </div>
                             <div class="box">
                                 <h4>Python</h4>
-                                <div class="percent">
+                                <div class="percent ">
                                     <div style="width: 80%;"></div>
                                 </div>
                             </div>
@@ -210,10 +210,10 @@
                 </div>
                 <div id="page2" class="page row gx-0 position-relative" size="A4">
                     <div id="dividing_line" class="position-absolute border"></div>
-                    <h2 class="text-center p-1 z-0" style="font-size: 2em; background:#003147; color:#fff">作品集</h2>
-                    <div class="p-3 z-0">
-                        <div class="row gx-0 justify-content-center p-3 position-relative">
-                            <div class="col-md-6 pb-3">
+                    <h2 class="text-center p-1 z-0 m-0" style="font-size: 2em; background:#003147; color:#fff">作品集</h2>
+                    <div class="z-0">
+                        <div class="row gx-0 justify-content-center position-relative m-3">
+                            <div class="col-md-6 portfolio">
                                 <div class="row gx-0">
                                     <div class="col-md-4 col-3">
                                         <div class="imgBx">
@@ -226,7 +226,7 @@
                                         <h2>拒食強身 - 斷食計畫</h2>
                                     </div>
                                 </div>
-                                <div class="box-shadow p-2">
+                                <div class="box-shadow p-2 me-2">
                                     <img class="img-fluid" src="images/noSayToFood.jpg" alt="">
                                 </div>
                                 <p class="p-2">
@@ -306,7 +306,7 @@
                                         <span class="spacer"></span>
                                     </div>
                                 </div>
-                                <div class="p-4">
+                                <div class="p-3">
                                     <div class="box mt-3">
                                         <h4>使用者介面設計</h4>
                                         <div class="percent">
@@ -351,7 +351,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 pb-3">
+                            <div class="col-md-6 portfolio">
                                 <div class="row gx-0">
                                     <div class="col-md-4 col-3">
                                         <div class="imgBx">
@@ -370,7 +370,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="box-shadow p-2">
+                                <div class="box-shadow p-2 ms-2">
                                     <img class="img-fluid" src="images/attendeer.jpg" alt="">
                                 </div>
                                 <p class="p-2">
@@ -453,7 +453,7 @@
                                         <span class="spacer"></span>
                                     </div>
                                 </div>
-                                <div class="p-4">
+                                <div class="p-3">
                                     <div class="box mt-3">
                                         <h4>使用者介面設計</h4>
                                         <div class="percent">
