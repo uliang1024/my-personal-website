@@ -11,22 +11,23 @@
     <title>Resume</title>
 </head>
 
-<body style="background: var(--bs-secondary-bg);">
+<body style="background: var(--bs-secondary-bg);" data-bs-spy="scroll" data-bs-target="#colorlib-aside">
     <div id="colorlib-page">
-        <a class="offcanvas-toggler position-absolute top-0 start-0 p-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#colorlib-aside"
-            aria-controls="colorlib-aside"><i class="fa-solid fa-bars fs-1" style="color: #000;"></i></a>
-        <div class="offcanvas offcanvas-start text-center p-5"
-            style="background: #fff;" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="colorlib-aside"
-            aria-labelledby="offcanvasScrollingLabel">
+        <button class="offcanvas-btn offcanvas-toggler position-fixed p-3 border-0 z-3" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#colorlib-aside" aria-controls="colorlib-aside" style="background: transparent;"><i class="fa-solid fa-bars fa-2x"
+            style="color: #000;"></i></button>
+        <div id="colorlib-aside" class="offcanvas offcanvas-start text-center p-5" style="background: #fff;" data-bs-scroll="true"
+            data-bs-backdrop="false" tabindex="-1" aria-labelledby="offcanvasScrollingLabel">
             <h1 id="colorlib-title" class="mb-5">目錄</h1>
-            <button type="button" class="btn-close position-absolute top-0 end-0 p-3 fs-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="offcanvas-btn btn-close position-absolute top-0 end-0 p-3 fs-3" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
             <nav id="colorlib-main-menu">
-                <ul class="p-0">
-                    <li class="colorlib-active" aria-current="page"><a href="index.html">簡歷</a></li>
-                    <li><a href="photography.html">作品集</a></li>
-                    <li><a href="travel.html">證照</a></li>
-                    <li><a href="fashion.html">下載PDF</a></li>
-                    <li><a href="about.html">UliangBlog</a></li>
+                <ul class="navbar-nav nav p-0">
+                    <li class="nav-item"><a class="nav-link active" href="#page1">簡歷</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#page2">作品集</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">證照</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">下載PDF</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/uliangBlog/">UliangBlog</a></li>
                 </ul>
             </nav>
         </div>
@@ -207,7 +208,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="page2" class="page row gx-0 mt-3 position-relative" size="A4">
+                <div id="page2" class="page row gx-0 position-relative" size="A4">
                     <div id="dividing_line" class="position-absolute border"></div>
                     <h2 class="text-center p-1 z-0" style="font-size: 2em; background:#003147; color:#fff">作品集</h2>
                     <div class="p-3 z-0">

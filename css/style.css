@@ -738,14 +738,6 @@ h1 {
     position: relative;
 }
 
-/* #colorlib-aside {
-    width: 400px;
-    position: fixed;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.04);
-    transition: all 0.5s ease;
-} */
-
 @media (min-width: 1200px) {
     #colorlib-aside {
         display: block!important;
@@ -789,11 +781,11 @@ h1 {
     transform: scaleX(1);
 }
 
-#colorlib-aside #colorlib-main-menu ul li.colorlib-active a {
+#colorlib-aside #colorlib-main-menu ul li a.active {
     color: #000;
 }
 
-#colorlib-aside #colorlib-main-menu ul li.colorlib-active a:after {
+#colorlib-aside #colorlib-main-menu ul li a.active:after {
     visibility: visible;
     transform: scaleX(1);
 }
@@ -832,7 +824,7 @@ h1 {
 
 @media (min-width: 768px) {
     #resume .page[size="A4"] {
-
+        margin-top: 1rem;
         width: 21cm;
         height: 29.7cm;
     }
