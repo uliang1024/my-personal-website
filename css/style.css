@@ -825,6 +825,7 @@ h1 {
 @media (min-width: 768px) {
     #resume .page[size="A4"] {
         width: 210mm;
+        height: 297mm;
         min-height: 297mm;
         margin: 10mm auto;
         border: 1px #D3D3D3 solid;
@@ -1025,6 +1026,17 @@ span.spacer:after {
     }
 
     #resume .page[size="A4"] {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: 210mm;
+        height: 297mm;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+
+    #resume .page {
         margin: 0;
         border: initial;
         border-radius: initial;
