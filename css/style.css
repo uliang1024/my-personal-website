@@ -1048,7 +1048,7 @@ span.spacer:after {
     }
 
     .left_Side, .right_Side {
-        max-height: 297mm;
+        height: 297mm;
     }
 
     .col-md-4 {
