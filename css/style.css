@@ -163,7 +163,7 @@ h1 {
     font-weight: 900;
 }
 
-.progress {
+#About .progress {
     justify-content: flex-start;
     border-radius: 50px;
     align-items: center;
@@ -206,7 +206,7 @@ h1 {
     width: 0;
 }
 
-.progress p {
+#About .progress p {
     color: var(--bs-body-bg);
     padding: 5px;
 }
@@ -948,23 +948,9 @@ h1 {
     font-size: 16px;
 }
 
-#resume .box .percent {
-    position: relative;
-    height: 10px;
-    background: #f0f0f0;
-    border-radius: 50px;
-}
-
-#resume .box .percent div {
-    height: 100%;
+#resume .box .progress .progress-bar {
     background: #03a9f4;
     border-radius: 50px;
-}
-
-#resume .box .percent span {
-    position: absolute;
-    right: 0;
-    top: -10px;
 }
 
 #resume .interest i {
@@ -1003,10 +989,6 @@ span.spacer:after {
 
 #page2 .box {
     padding-inline: 0.25em;
-}
-
-#page2 .box .percent {
-    margin-bottom: 0.5rem;
 }
 
 #page3 .card {
