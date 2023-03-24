@@ -1047,6 +1047,10 @@ span.spacer:after {
         page-break-after: always;
     }
 
+    .left_Side, .right_Side {
+        max-height: 297mm;
+    }
+
     .col-md-4 {
         flex: 0 0 auto;
         width: 33.33333333%;
