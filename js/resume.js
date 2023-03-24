@@ -23,11 +23,13 @@ x.addEventListener("change", function (e) {
     myFunction(e);
 });
 
-// navLink.forEach(element => {
-//     element.addEventListener("click", () => {
-//         myFunction(x);
-//     });
-// });
+navLink.forEach(element => {
+    element.addEventListener("click", () => {
+        setTimeout(function(){
+            myFunction(x);
+        }, 500)
+    });
+});
 
 printA4.addEventListener("click", () => {
     window.print();

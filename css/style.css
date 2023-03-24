@@ -1009,6 +1009,22 @@ span.spacer:after {
     margin-bottom: 0.5rem;
 }
 
+#page3 .card {
+    width:90%;
+    border: 0;
+}
+
+#page3 .images {
+    height: 200px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#page3 .images img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
 
 /* ------------------print----------------- */
 
