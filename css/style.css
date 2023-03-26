@@ -835,6 +835,10 @@ h1 {
     }
 }
 
+#resume .title {
+    height: 1.5em;
+}
+
 #resume .profileText {
     display: flex;
     flex-direction: column;
@@ -864,7 +868,7 @@ h1 {
     padding-top: 40px;
 }
 
-#resume .title {
+#resume .title1 {
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 20px;
@@ -992,18 +996,21 @@ span.spacer:after {
     padding-inline: 0.25em;
 }
 
-#page3 .card {
-    width:90%;
+#page3 .card,
+#page4 .card {
+    width: 90%;
     border: 0;
 }
 
-#page3 .images {
+#page3 .images,
+#page4 .images {
     height: 200px;
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#page3 .images img{
+#page3 .images img,
+#page4 .images img {
     height: 100%;
     width: 100%;
     object-fit: contain;
@@ -1047,7 +1054,8 @@ span.spacer:after {
         page-break-after: always;
     }
 
-    .left_Side, .right_Side {
+    .left_Side,
+    .right_Side {
         height: 297mm;
     }
 
