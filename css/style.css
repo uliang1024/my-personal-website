@@ -1056,7 +1056,7 @@ span.spacer:after {
 
     .left_Side,
     .right_Side {
-        height: 297mm;
+        height: auto;
     }
 
     .col-md-4 {
